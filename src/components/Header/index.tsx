@@ -1,26 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { MdPerson } from 'react-icons/md';
 
-import { useUsers } from '../../hooks/users';
-
-import { Container } from './styles';
+import { Container, ProfileImageContainer } from './styles';
 
 const Header: React.FC = () => {
-  const { user, filterUserInfo } = useUsers();
-
-  useEffect(() => {
-    const { value } = user?.id;
-    filterUserInfo(value);
-  }, [filterUserInfo, user]);
-
   return (
     <Container>
       <h1>Pharma Inc</h1>
 
-      <img
-        data-testid="user-avatar-img"
-        src={user?.picture?.medium}
-        alt={`${user?.name?.first} ${user?.name?.last} Avatar`}
-      />
+      <ProfileImageContainer>
+        <MdPerson size={24} color="#A2B0BD" />
+      </ProfileImageContainer>
     </Container>
   );
 };

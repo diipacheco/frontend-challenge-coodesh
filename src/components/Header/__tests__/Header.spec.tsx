@@ -100,17 +100,4 @@ describe('<Header />', () => {
 
     expect(wrapper).toMatchSnapshot();
   });
-
-  it('should be able to show users avatar', () => {
-    const { getByTestId } = render(<Header />);
-
-    const userAvatarImgElement = getByTestId(
-      'user-avatar-img',
-    ) as HTMLImageElement;
-
-    expect(userAvatarImgElement.alt).toBe('Sébastien Leroy Avatar');
-    expect(userAvatarImgElement.src).toBe(
-      'https://randomuser.me/api/portraits/med/men/91.jpg',
-    );
-  });
 });

@@ -22,13 +22,14 @@ export default createGlobalStyle`
   }
 
   html {
-    background: var(--white);
+    background: var(--background);
   }
 
   :root {
     --white: #FFFFFF;
     --dark-grey: #555555;
     --medium-dark-grey: #848484;
+    --background: #F7F9FA;
     --box-shadow: #00000029;
     --grey: #DBDBDB;
     --blue: #4DA6B3;
