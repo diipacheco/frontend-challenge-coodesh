@@ -1,5 +1,13 @@
 import React from 'react';
 
-const App: React.FC = () => <h1>Hello World</h1>;
+import { UsersContextProvider } from './hooks/users';
+import Global from './styles/Global';
+
+const App: React.FC = () => (
+  <UsersContextProvider>
+    <h1>hello world</h1>
+    <Global />
+  </UsersContextProvider>
+);
 
 export default App;

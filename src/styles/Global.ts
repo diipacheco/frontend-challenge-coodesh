@@ -5,7 +5,7 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--medium-dark-grey);
+    color: var(--dark-grey);
   }
 
   html, body, #root {
