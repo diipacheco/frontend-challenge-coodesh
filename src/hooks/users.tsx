@@ -9,7 +9,7 @@ interface ILocation {
   postcode: string;
 }
 
-interface IUser {
+export interface IUser {
   userId: number;
   id: {
     name: string;
