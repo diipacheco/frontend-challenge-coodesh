@@ -56,7 +56,11 @@ describe('UsersHook', () => {
       ],
     };
 
-    apiMock.onGet('&page=1').reply(200, apiResponse);
+    apiMock
+      .onGet(
+        '?inc=id,picture,name,email,gender,dob,cell,nat,location&results=50&page=1',
+      )
+      .reply(200, apiResponse);
 
     const { result, waitForNextUpdate } = renderHook(() => useUsers(), {
       wrapper: UsersContextProvider,
@@ -161,7 +165,11 @@ describe('UsersHook', () => {
       nat: 'CH',
     };
 
-    apiMock.onGet('&page=1').reply(200, apiResponse);
+    apiMock
+      .onGet(
+        '?inc=id,picture,name,email,gender,dob,cell,nat,location&results=50&page=1',
+      )
+      .reply(200, apiResponse);
 
     const { result, waitForNextUpdate } = renderHook(() => useUsers(), {
       wrapper: UsersContextProvider,

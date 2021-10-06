@@ -51,7 +51,9 @@ export const UsersContextProvider: React.FC = ({ children }) => {
   const [user, setUser] = useState({} as IUser);
 
   const fetchUsers = useCallback(async (page: number) => {
-    const response = await api.get(`&page=${page}`);
+    const response = await api.get(
+      `?inc=id,picture,name,email,gender,dob,cell,nat,location&results=50&page=${page}`,
+    );
     setUsers(response.data.results);
   }, []);
 

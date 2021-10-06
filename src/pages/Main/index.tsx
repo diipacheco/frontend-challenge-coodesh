@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+import { useUsers } from '../../hooks/users';
 
 import Header from '../../components/Header';
 import SearchBar from '../../components/SearchBar';
+import Table from '../../components/Table';
 
 import { Container, Content } from './styles';
 
 const Main: React.FC = () => {
+  const { fetchUsers } = useUsers();
+
+  useEffect(() => {
+    fetchUsers(1);
+  }, [fetchUsers]);
   return (
     <Container>
       <Header />
@@ -17,6 +25,8 @@ const Main: React.FC = () => {
         </h5>
 
         <SearchBar />
+
+        <Table />
       </Content>
     </Container>
   );

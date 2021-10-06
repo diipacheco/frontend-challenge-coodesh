@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <main
-        class="sc-hKgJUU hfALyL"
+        class="sc-eCstlR gMKEgS"
       >
         <header
           class="sc-bdfBQB hKKSWb"
@@ -35,7 +35,7 @@ Object {
           </div>
         </header>
         <section
-          class="sc-eCstlR iLQGbE"
+          class="sc-jSgvzq gjtbVY"
         >
           <h5>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis, magna ac varius fringilla, metus tellus ornare dui, non aliquet augue mi auctor massa mauris.
@@ -67,13 +67,53 @@ Object {
               </g>
             </svg>
           </div>
+          <div
+            class="sc-hKgJUU gHkkSZ"
+          >
+            <table>
+              <tbody>
+                <tr
+                  data-testid="categories-row"
+                >
+                  <th>
+                    Name
+                  </th>
+                  <th>
+                    Gender
+                  </th>
+                  <th>
+                    Birth
+                  </th>
+                  <th>
+                    Actions
+                  </th>
+                </tr>
+                <tr
+                  data-testid="content-row"
+                >
+                  <td>
+                    Sébastien Leroy
+                  </td>
+                  <td>
+                    male
+                  </td>
+                  <td>
+                    03/11/1973
+                  </td>
+                  <td>
+                    teste
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
       </main>
     </div>
   </body>,
   "container": <div>
     <main
-      class="sc-hKgJUU hfALyL"
+      class="sc-eCstlR gMKEgS"
     >
       <header
         class="sc-bdfBQB hKKSWb"
@@ -102,7 +142,7 @@ Object {
         </div>
       </header>
       <section
-        class="sc-eCstlR iLQGbE"
+        class="sc-jSgvzq gjtbVY"
       >
         <h5>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis, magna ac varius fringilla, metus tellus ornare dui, non aliquet augue mi auctor massa mauris.
@@ -133,6 +173,46 @@ Object {
               />
             </g>
           </svg>
+        </div>
+        <div
+          class="sc-hKgJUU gHkkSZ"
+        >
+          <table>
+            <tbody>
+              <tr
+                data-testid="categories-row"
+              >
+                <th>
+                  Name
+                </th>
+                <th>
+                  Gender
+                </th>
+                <th>
+                  Birth
+                </th>
+                <th>
+                  Actions
+                </th>
+              </tr>
+              <tr
+                data-testid="content-row"
+              >
+                <td>
+                  Sébastien Leroy
+                </td>
+                <td>
+                  male
+                </td>
+                <td>
+                  03/11/1973
+                </td>
+                <td>
+                  teste
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
     </main>
