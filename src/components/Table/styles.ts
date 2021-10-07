@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  width: 100%;
+  flex-direction: column;
 
-  margin-top: 45px;
+  width: 100%;
+  padding: 45px 0;
 
   table {
     border-spacing: 0;
@@ -43,5 +44,23 @@ export const Container = styled.div`
         border-right: 0;
       }
     }
+  }
+`;
+
+export const LoadMoreButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  font-weight: bold;
+  font-size: 20px;
+  color: #293845;
+
+  margin-top: 25px;
+
+  > svg {
+    margin-right: 10px;
   }
 `;

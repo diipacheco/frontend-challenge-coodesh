@@ -40,8 +40,12 @@ interface IUserContextData {
   users: IUser[];
   user: IUser;
 
-  fetchUsers(page: number): Promise<void>;
+  loading: boolean;
+  page: number;
+
+  fetchUsers(): Promise<void>;
   filterUserInfo(id: string): void;
+  handleNextPage(): void;
 }
 
 const UsersContext = createContext({} as IUserContextData);
@@ -49,13 +53,19 @@ const UsersContext = createContext({} as IUserContextData);
 export const UsersContextProvider: React.FC = ({ children }) => {
   const [users, setUsers] = useState([] as IUser[]);
   const [user, setUser] = useState({} as IUser);
+  const [loading, setLoading] = useState(false);
+  const [page, setPage] = useState(1);
 
-  const fetchUsers = useCallback(async (page: number) => {
+  const fetchUsers = useCallback(async () => {
+    setLoading(true);
+
     const response = await api.get(
       `?inc=id,picture,name,email,gender,dob,cell,nat,location&results=50&page=${page}`,
     );
-    setUsers(response.data.results);
-  }, []);
+
+    setUsers([...users, ...response.data.results]);
+    setLoading(false);
+  }, [page, users]);
 
   const filterUserInfo = useCallback(
     (id: string) => {
@@ -66,8 +76,23 @@ export const UsersContextProvider: React.FC = ({ children }) => {
     [users],
   );
 
+  const handleNextPage = useCallback(() => {
+    setPage(page + 1);
+    fetchUsers();
+  }, [page, fetchUsers]);
+
   return (
-    <UsersContext.Provider value={{ users, user, fetchUsers, filterUserInfo }}>
+    <UsersContext.Provider
+      value={{
+        users,
+        user,
+        fetchUsers,
+        filterUserInfo,
+        loading,
+        page,
+        handleNextPage,
+      }}
+    >
       {children}
     </UsersContext.Provider>
   );

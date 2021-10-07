@@ -12,8 +12,8 @@ const Main: React.FC = () => {
   const { fetchUsers } = useUsers();
 
   useEffect(() => {
-    fetchUsers(1);
-  }, [fetchUsers]);
+    fetchUsers();
+  }, []);
   return (
     <Container>
       <Header />

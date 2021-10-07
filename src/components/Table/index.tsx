@@ -3,15 +3,16 @@ import moment from 'moment';
 import {
   AiOutlineSortAscending,
   AiOutlineSortDescending,
+  AiOutlineReload,
 } from 'react-icons/ai';
 
 import { IUser, useUsers } from '../../hooks/users';
 import { useSortableData } from '../../hooks/useSortableData';
 
-import { Container } from './styles';
+import { Container, LoadMoreButton } from './styles';
 
 const Table: React.FC = () => {
-  const { users } = useUsers();
+  const { users, handleNextPage } = useUsers();
   const { sortedItems, requestSort, sortConfig } = useSortableData(users);
 
   const renderTableData = useCallback(() => {
@@ -20,9 +21,9 @@ const Table: React.FC = () => {
 
       return (
         <tr data-testid="content-row" key={index}>
-          <td>{`${name.first} ${name.last}`}</td>
+          <td>{`${name?.first} ${name?.last}`}</td>
           <td>{gender}</td>
-          <td>{moment(dob.date).format('DD/MM/YYYY')}</td>
+          <td>{moment(dob?.date).format('DD/MM/YYYY')}</td>
           <td>teste</td>
         </tr>
       );
@@ -55,6 +56,10 @@ const Table: React.FC = () => {
           {renderTableData()}
         </tbody>
       </table>
+      <LoadMoreButton type="button" onClick={handleNextPage}>
+        <AiOutlineReload size={20} fill="#293845" />
+        Loading more...
+      </LoadMoreButton>
     </Container>
   );
 };
