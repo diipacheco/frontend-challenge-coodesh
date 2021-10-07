@@ -1,16 +1,20 @@
 import { createContext, useContext, useState, useCallback } from 'react';
+import { v4 } from 'uuid';
 
 import api from '../services/api';
 
 interface ILocation {
-  street: string;
+  street: {
+    number: number;
+    name: string;
+  };
   city: string;
   state: string;
   postcode: string;
 }
 
 export interface IUser {
-  userId: number;
+  userId: string;
   id: {
     name: string;
     value: string;
@@ -62,15 +66,20 @@ export const UsersContextProvider: React.FC = ({ children }) => {
     const response = await api.get(
       `?inc=id,picture,name,email,gender,dob,cell,nat,location&results=50&page=${page}`,
     );
+    const usersWithId = response.data.results.map((item: IUser) => {
+      const generatedID = v4();
 
-    setUsers([...users, ...response.data.results]);
+      item.userId = generatedID;
+      return item;
+    });
+
+    setUsers([...users, ...usersWithId]);
     setLoading(false);
   }, [page, users]);
 
   const filterUserInfo = useCallback(
     (id: string) => {
-      const filteredUser = users?.find(item => item?.id?.value === id) as IUser;
-
+      const filteredUser = users?.find(item => item?.userId === id) as IUser;
       setUser(filteredUser);
     },
     [users],

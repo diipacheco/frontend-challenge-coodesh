@@ -34,7 +34,7 @@ export const Container = styled.div`
 
     th,
     td {
-      margin: 0;
+      margin: 0 auto;
       padding: 15px 25px;
       border-bottom: 1px solid var(--medium-dark-grey);
       border-right: 1px solid var(--medium-dark-grey);
@@ -63,4 +63,22 @@ export const LoadMoreButton = styled.button`
   > svg {
     margin-right: 10px;
   }
+`;
+
+export const ViewButton = styled.button`
+  width: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 06px 24px;
+  margin-left: 14px;
+
+  cursor: pointer;
+  border-radius: 08px;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #293845;
+  color: var(--white);
 `;

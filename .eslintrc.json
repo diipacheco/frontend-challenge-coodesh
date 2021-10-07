@@ -34,6 +34,7 @@
     "react/jsx-props-no-spreading": "off",
     "react/no-array-index-key": "off",
     "@typescript-eslint/no-explicit-any": "off",
+    "no-param-reassign": "off",
     "react/jsx-filename-extension": [
       1,
       {
