@@ -80,6 +80,7 @@ export const UsersContextProvider: React.FC = ({ children }) => {
   const filterUserInfo = useCallback(
     (id: string) => {
       const filteredUser = users?.find(item => item?.userId === id) as IUser;
+      localStorage.setItem('filteredUser', JSON.stringify(filteredUser));
       setUser(filteredUser);
     },
     [users],

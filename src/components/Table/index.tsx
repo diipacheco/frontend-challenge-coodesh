@@ -17,6 +17,8 @@ const Table: React.FC = () => {
   const { sortedItems, requestSort, sortConfig } = useSortableData(users);
   const [modalIsOpen, setIsOpen] = useState(false);
 
+  console.log(sortedItems);
+
   const handleModalOpen = useCallback(
     (userID: string) => {
       setIsOpen(true);
