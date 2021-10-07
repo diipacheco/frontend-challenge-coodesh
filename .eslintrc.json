@@ -35,6 +35,8 @@
     "react/no-array-index-key": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "no-param-reassign": "off",
+    "array-callback-return": "off",
+    "consistent-return": "off",
     "react/jsx-filename-extension": [
       1,
       {

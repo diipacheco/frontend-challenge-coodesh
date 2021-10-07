@@ -50,6 +50,7 @@ interface IUserContextData {
   fetchUsers(): Promise<void>;
   filterUserInfo(id: string): void;
   handleNextPage(): void;
+  searchUsers(text: string): void;
 }
 
 const UsersContext = createContext({} as IUserContextData);
@@ -86,6 +87,31 @@ export const UsersContextProvider: React.FC = ({ children }) => {
     [users],
   );
 
+  const searchUsers = useCallback(
+    (text: string) => {
+      const searchedUser = users.filter(item => {
+        if (item?.name?.first === text) {
+          console.log(item);
+          return item;
+        }
+        if (item?.name?.last === text) {
+          console.log(item);
+
+          return item;
+        }
+
+        if (item?.nat === text) {
+          console.log(item);
+
+          return item;
+        }
+      });
+      console.log(searchedUser);
+      setUsers(searchedUser);
+    },
+    [users],
+  );
+
   const handleNextPage = useCallback(() => {
     setPage(page + 1);
     fetchUsers();
@@ -101,6 +127,7 @@ export const UsersContextProvider: React.FC = ({ children }) => {
         loading,
         page,
         handleNextPage,
+        searchUsers,
       }}
     >
       {children}

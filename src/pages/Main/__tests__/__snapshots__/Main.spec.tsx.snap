@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <main
-        class="sc-jSgvzq nSXGi"
+        class="sc-jrAFXE hZUTjv"
       >
         <header
           class="sc-bdfBQB hKKSWb"
@@ -35,7 +35,7 @@ Object {
           </div>
         </header>
         <section
-          class="sc-gKseQn iJGxIq"
+          class="sc-kEjbQP kyWxxo"
         >
           <h5>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis, magna ac varius fringilla, metus tellus ornare dui, non aliquet augue mi auctor massa mauris.
@@ -68,7 +68,7 @@ Object {
             </svg>
           </div>
           <div
-            class="sc-hKgJUU kAsvwY"
+            class="sc-iBPTik ekuUPc"
           >
             <table>
               <tbody>
@@ -119,13 +119,18 @@ Object {
                     03/11/1973
                   </td>
                   <td>
-                    teste
+                    <button
+                      class="sc-pGacB gkFoUy"
+                      type="button"
+                    >
+                      View
+                    </button>
                   </td>
                 </tr>
               </tbody>
             </table>
             <button
-              class="sc-eCstlR hYXSDV"
+              class="sc-fubCzh erTMDO"
               type="button"
             >
               <svg
@@ -147,10 +152,13 @@ Object {
         </section>
       </main>
     </div>
+    <div
+      class="ReactModalPortal"
+    />
   </body>,
   "container": <div>
     <main
-      class="sc-jSgvzq nSXGi"
+      class="sc-jrAFXE hZUTjv"
     >
       <header
         class="sc-bdfBQB hKKSWb"
@@ -179,7 +187,7 @@ Object {
         </div>
       </header>
       <section
-        class="sc-gKseQn iJGxIq"
+        class="sc-kEjbQP kyWxxo"
       >
         <h5>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis, magna ac varius fringilla, metus tellus ornare dui, non aliquet augue mi auctor massa mauris.
@@ -212,7 +220,7 @@ Object {
           </svg>
         </div>
         <div
-          class="sc-hKgJUU kAsvwY"
+          class="sc-iBPTik ekuUPc"
         >
           <table>
             <tbody>
@@ -263,13 +271,18 @@ Object {
                   03/11/1973
                 </td>
                 <td>
-                  teste
+                  <button
+                    class="sc-pGacB gkFoUy"
+                    type="button"
+                  >
+                    View
+                  </button>
                 </td>
               </tr>
             </tbody>
           </table>
           <button
-            class="sc-eCstlR hYXSDV"
+            class="sc-fubCzh erTMDO"
             type="button"
           >
             <svg
