@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useCallback } from 'react';
-import { v4 } from 'uuid';
+import * as uuid from 'uuid';
 
 import api from '../services/api';
 
@@ -8,9 +8,10 @@ interface ILocation {
     number: number;
     name: string;
   };
+  country: string;
   city: string;
   state: string;
-  postcode: string;
+  postcode: number;
 }
 
 export interface IUser {
@@ -33,7 +34,7 @@ export interface IUser {
   gender: string;
   dob: {
     date: string;
-    age: string;
+    age: number;
   };
   cell: string;
   nat: string;
@@ -68,7 +69,7 @@ export const UsersContextProvider: React.FC = ({ children }) => {
       `?inc=id,picture,name,email,gender,dob,cell,nat,location&results=50&page=${page}`,
     );
     const usersWithId = response.data.results.map((item: IUser) => {
-      const generatedID = v4();
+      const generatedID = uuid.v4();
 
       item.userId = generatedID;
       return item;
@@ -91,22 +92,17 @@ export const UsersContextProvider: React.FC = ({ children }) => {
     (text: string) => {
       const searchedUser = users.filter(item => {
         if (item?.name?.first === text) {
-          console.log(item);
           return item;
         }
         if (item?.name?.last === text) {
-          console.log(item);
-
           return item;
         }
 
         if (item?.nat === text) {
-          console.log(item);
-
           return item;
         }
       });
-      console.log(searchedUser);
+
       setUsers(searchedUser);
     },
     [users],

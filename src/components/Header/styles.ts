@@ -8,10 +8,13 @@ export const Container = styled.header`
   align-items: center;
   background: var(--white);
 
-  padding: 0 56px;
+  padding: 20px 56px;
 
-  > h1 {
-    color: var(--blue);
+  > a {
+    text-decoration: none;
+    > h1 {
+      color: var(--blue);
+    }
   }
 `;
 
