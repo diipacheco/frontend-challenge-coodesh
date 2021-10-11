@@ -9,11 +9,15 @@ Object {
         class="sc-jrAFXE hZUTjv"
       >
         <header
-          class="sc-bdfBQB hKKSWb"
+          class="sc-bdfBQB fbqOyr"
         >
-          <h1>
-            Pharma Inc
-          </h1>
+          <a
+            href="/"
+          >
+            <h1>
+              Pharma Inc
+            </h1>
+          </a>
           <div
             class="sc-gsTEea eVigpr"
           >
@@ -161,11 +165,15 @@ Object {
       class="sc-jrAFXE hZUTjv"
     >
       <header
-        class="sc-bdfBQB hKKSWb"
+        class="sc-bdfBQB fbqOyr"
       >
-        <h1>
-          Pharma Inc
-        </h1>
+        <a
+          href="/"
+        >
+          <h1>
+            Pharma Inc
+          </h1>
+        </a>
         <div
           class="sc-gsTEea eVigpr"
         >

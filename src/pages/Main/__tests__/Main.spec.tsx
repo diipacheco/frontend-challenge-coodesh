@@ -1,6 +1,8 @@
 import { render } from '@testing-library/react';
+import { Router } from 'react-router-dom';
 
 import Main from '../index';
+import history from '../../../services/history';
 
 jest.mock('../../../hooks/users', () => ({
   useUsers: () => ({
@@ -97,7 +99,11 @@ jest.mock('../../../hooks/users', () => ({
 
 describe('<Main />', () => {
   it('should match snapshots', () => {
-    const wrapper = render(<Main />);
+    const wrapper = render(
+      <Router history={history}>
+        <Main />
+      </Router>,
+    );
 
     expect(wrapper).toMatchSnapshot();
   });

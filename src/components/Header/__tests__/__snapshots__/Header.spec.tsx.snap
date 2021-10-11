@@ -6,11 +6,15 @@ Object {
   "baseElement": <body>
     <div>
       <header
-        class="sc-bdfBQB hKKSWb"
+        class="sc-bdfBQB fbqOyr"
       >
-        <h1>
-          Pharma Inc
-        </h1>
+        <a
+          href="/"
+        >
+          <h1>
+            Pharma Inc
+          </h1>
+        </a>
         <div
           class="sc-gsTEea eVigpr"
         >
@@ -35,11 +39,15 @@ Object {
   </body>,
   "container": <div>
     <header
-      class="sc-bdfBQB hKKSWb"
+      class="sc-bdfBQB fbqOyr"
     >
-      <h1>
-        Pharma Inc
-      </h1>
+      <a
+        href="/"
+      >
+        <h1>
+          Pharma Inc
+        </h1>
+      </a>
       <div
         class="sc-gsTEea eVigpr"
       >

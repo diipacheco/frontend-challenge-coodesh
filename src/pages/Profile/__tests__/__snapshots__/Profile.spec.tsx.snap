@@ -16,11 +16,15 @@ Object {
         class="sc-gKseQn"
       >
         <header
-          class="sc-eCstlR ecpwZt"
+          class="sc-eCstlR bWjrkN"
         >
-          <h1>
-            Pharma Inc
-          </h1>
+          <a
+            href="/"
+          >
+            <h1>
+              Pharma Inc
+            </h1>
+          </a>
           <div
             class="sc-jSgvzq inNPAN"
           >
@@ -107,7 +111,7 @@ Object {
                 Birth:
               </strong>
               <p>
-                07/10/2021
+                11/10/2021
               </p>
             </div>
             <div
@@ -170,11 +174,15 @@ Object {
       class="sc-gKseQn"
     >
       <header
-        class="sc-eCstlR ecpwZt"
+        class="sc-eCstlR bWjrkN"
       >
-        <h1>
-          Pharma Inc
-        </h1>
+        <a
+          href="/"
+        >
+          <h1>
+            Pharma Inc
+          </h1>
+        </a>
         <div
           class="sc-jSgvzq inNPAN"
         >
